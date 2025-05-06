@@ -7,36 +7,36 @@
 // This allows importing from the root of the package
 
 export {
-    // Case manipulation
-    capitalize,
-    camelCase,
-    pascalCase,
-    snakeCase,
-    kebabCase,
-    titleCase,
-    
-    // Text transformation
-    truncate,
-    ellipsis,
-    reverse,
-    slugify,
-    stripHTML,
-    stripPunctuation,
-    
-    // Text analysis
-    countWords,
-    countOccurrences,
-    isEmail,
-    isURL,
-    containsSubstring,
-    hasEmoji,
-    
-    // String generation
-    randomString,
-    pluralize,
-    maskString
-  } from './stringUtils';
+  // Case manipulation
+  capitalize,
+  camelCase,
+  pascalCase,
+  snakeCase,
+  kebabCase,
+  titleCase,
   
-  // Also export as default
-  import * as stringUtils from './stringUtils';
-  export default stringUtils;
+  // Text transformation
+  truncate,
+  ellipsis,
+  reverse,
+  slugify,
+  stripHTML,
+  stripPunctuation,
+  
+  // Text analysis
+  countWords,
+  countOccurrences,
+  isEmail,
+  isURL,
+  containsSubstring,
+  hasEmoji,
+  
+  // String generation
+  randomString,
+  pluralize,
+  maskString
+} from './stringUtils';
+
+// Also export as default
+import * as stringUtils from './stringUtils';
+export default stringUtils;
