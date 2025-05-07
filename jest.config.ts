@@ -55,7 +55,9 @@ const config: Config.InitialOptions = {
     
     // A transformer is needed to process non-JS files
     transform: {
-      '^.+\\.(js|ts)$': 'babel-jest'
+      '^.+\\.(ts|tsx)$': ['ts-jest', {
+        tsconfig: 'tsconfig.json'
+      }]
     },
 
     // Automatically clear mock calls and instances between every test
@@ -83,8 +85,12 @@ const config: Config.InitialOptions = {
 
     // A map from regular expressions to module names that allow to stub out resources with a single module
     moduleNameMapper: {
-      "^@/(.*)$": "<rootDir>/src/$1"
+      "^@/(.*)$": "<rootDir>/src/$1",
+      '^(\\.{1,2}/.*)\\.js$': '$1'
     },
+
+    // Enable ES modules
+    extensionsToTreatAsEsm: ['.ts']
 };
 
 export default config;
