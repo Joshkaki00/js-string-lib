@@ -7,8 +7,7 @@ module.exports = {
     
     // The glob patterns Jest uses to detect test files
     testMatch: [
-      '**/__tests__/**/*.js',
-      '**/?(*.)+(spec|test).js'
+      '**/test/**/*.test.{js,ts}'
     ],
     
     // An array of regexp pattern strings that are matched against all test paths
@@ -54,6 +53,34 @@ module.exports = {
     
     // A transformer is needed to process non-JS files
     transform: {
-      '^.+\\.js$': 'babel-jest'
-    }
-  };
+      '^.+\\.(js|ts)$': 'babel-jest'
+    },
+
+    // Automatically clear mock calls and instances between every test
+    clearMocks: true,
+
+    // An array of glob patterns indicating a set of files for which coverage information should be collected
+    collectCoverageFrom: [
+      "src/**/*.{js,ts}",
+      "!src/**/*.d.ts",
+      "!src/**/index.{js,ts}"
+    ],
+
+    // An array of regexp patterns that are matched against all source file paths before re-running tests in watch mode
+    watchPathIgnorePatterns: [
+      "/node_modules/",
+      "/dist/"
+    ],
+
+    // An array of file extensions your modules use
+    moduleFileExtensions: [
+      "js",
+      "ts",
+      "json"
+    ],
+
+    // A map from regular expressions to module names that allow to stub out resources with a single module
+    moduleNameMapper: {
+      "^@/(.*)$": "<rootDir>/src/$1"
+    },
+};

@@ -110,6 +110,12 @@ npm run lint:fix
 
 ## Features
 
+- **TypeScript Support**: Full TypeScript definitions for better developer experience
+- **Case Manipulation**: Convert between different text cases (camelCase, snake_case, etc.)
+- **Text Transformation**: Truncate, reverse, strip HTML, etc.
+- **Text Analysis**: Count words, check for emails or URLs, etc.
+- **String Generation**: Generate random strings, pluralize text, mask characters
+
 ### Case Manipulation
 - `capitalize(str)`: Capitalizes the first letter of a string
 - `camelCase(str)`: Converts string to camelCase
@@ -142,14 +148,17 @@ npm run lint:fix
 ## Usage
 
 ```javascript
-import { capitalize, camelCase, isEmail } from 'string-utils-lib';
+// ES Module import
+import { camelCase, truncate } from 'string-utils-lib';
 
-// Case manipulation
-capitalize('hello world'); // 'Hello world'
-camelCase('hello-world'); // 'helloWorld'
+// CommonJS require
+const { camelCase, truncate } = require('string-utils-lib');
 
-// Text analysis
-isEmail('test@example.com'); // true
+// TypeScript
+import { camelCase, truncate, RandomStringOptions } from 'string-utils-lib';
+
+camelCase('hello world'); // 'helloWorld'
+truncate('hello world', 5); // 'hello'
 ```
 
 ## Examples

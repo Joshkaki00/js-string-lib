@@ -2,12 +2,13 @@ import babel from '@rollup/plugin-babel';
 import resolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
 import { terser } from 'rollup-plugin-terser';
+import typescript from '@rollup/plugin-typescript';
 import pkg from './package.json';
 
 export default [
   // UMD build for browsers
   {
-    input: 'src/index.js',
+    input: 'src/index.ts',
     output: {
       name: 'StringUtils',
       file: 'dist/string-utils.umd.js',
@@ -17,15 +18,17 @@ export default [
     plugins: [
       resolve(),
       commonjs(),
+      typescript({ tsconfig: './tsconfig.json' }),
       babel({
         babelHelpers: 'bundled',
+        extensions: ['.js', '.ts'],
         exclude: 'node_modules/**'
       })
     ]
   },
   // Minified UMD build
   {
-    input: 'src/index.js',
+    input: 'src/index.ts',
     output: {
       name: 'StringUtils',
       file: 'dist/string-utils.umd.min.js',
@@ -35,8 +38,10 @@ export default [
     plugins: [
       resolve(),
       commonjs(),
+      typescript({ tsconfig: './tsconfig.json' }),
       babel({
         babelHelpers: 'bundled',
+        extensions: ['.js', '.ts'],
         exclude: 'node_modules/**'
       }),
       terser()
@@ -44,14 +49,16 @@ export default [
   },
   // CommonJS and ES Module builds
   {
-    input: 'src/index.js',
+    input: 'src/index.ts',
     output: [
       { file: pkg.main, format: 'cjs', exports: 'named' },
       { file: pkg.module, format: 'es' }
     ],
     plugins: [
+      typescript({ tsconfig: './tsconfig.json' }),
       babel({
         babelHelpers: 'bundled',
+        extensions: ['.js', '.ts'],
         exclude: 'node_modules/**'
       })
     ],
