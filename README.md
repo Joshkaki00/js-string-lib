@@ -8,6 +8,54 @@ A comprehensive JavaScript utility library for string manipulation, providing a 
 npm install string-utils-lib
 ```
 
+## Development
+
+### Prerequisites
+- Node.js (v14 or higher)
+- npm (v6 or higher)
+
+### Setup
+1. Clone the repository:
+```bash
+git clone https://github.com/yourusername/string-utils-lib.git
+cd string-utils-lib
+```
+
+2. Install dependencies:
+```bash
+npm install
+```
+
+### Running Tests
+```bash
+# Run all tests
+npm test
+
+# Run tests in watch mode
+npm run test:watch
+
+# Run tests with coverage
+npm run test:coverage
+```
+
+### Building
+```bash
+# Build the library
+npm run build
+
+# Build in watch mode
+npm run build:watch
+```
+
+### Linting
+```bash
+# Run linter
+npm run lint
+
+# Fix linting issues
+npm run lint:fix
+```
+
 ## Features
 
 ### Case Manipulation
@@ -98,4 +146,4 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 ## License
 
-MIT License - feel free to use this library in your projects. 
+MIT License - feel free to use this library in your projects.
