@@ -1,4 +1,6 @@
-module.exports = {
+import type { Config } from '@jest/types';
+
+const config: Config.InitialOptions = {
     // The root directory that Jest should scan for tests and modules
     rootDir: '.',
     
@@ -84,3 +86,5 @@ module.exports = {
       "^@/(.*)$": "<rootDir>/src/$1"
     },
 };
+
+export default config;

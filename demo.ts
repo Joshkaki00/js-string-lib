@@ -1,4 +1,26 @@
-const {capitalize, camelCase, pascalCase, snakeCase, kebabCase, titleCase, truncate, ellipsis, reverse, slugify, stripHTML, stripPunctuation, countWords, countOccurrences, isEmail, isURL, containsSubstring, hasEmoji, randomString, pluralize, maskString} = require ('./dist/string-utils.umd.js');
+import {
+  capitalize,
+  camelCase,
+  pascalCase,
+  snakeCase,
+  kebabCase,
+  titleCase,
+  truncate,
+  ellipsis,
+  reverse,
+  slugify,
+  stripHTML,
+  stripPunctuation,
+  countWords,
+  countOccurrences,
+  isEmail,
+  isURL,
+  containsSubstring,
+  hasEmoji,
+  randomString,
+  pluralize,
+  maskString
+} from './dist/string-utils.umd.js';
 
 console.log(capitalize('hello'));
 console.log(camelCase('hello world'));

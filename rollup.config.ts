@@ -1,3 +1,4 @@
+import type { RollupOptions } from 'rollup';
 import babel from '@rollup/plugin-babel';
 import resolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
@@ -5,7 +6,7 @@ import { terser } from 'rollup-plugin-terser';
 import typescript from '@rollup/plugin-typescript';
 import pkg from './package.json';
 
-export default [
+const config: RollupOptions[] = [
   // UMD build for browsers
   {
     input: 'src/index.ts',
@@ -65,3 +66,5 @@ export default [
     external: Object.keys(pkg.dependencies || {})
   }
 ];
+
+export default config;
