@@ -5,10 +5,10 @@ A comprehensive JavaScript utility library for string manipulation, providing a 
 ## Installation
 
 ```bash
-npm install @joshkaki00/js-string-lib
+npm i string-utils-lib
 ```
 
-You can also find the package on npm: [@joshkaki00/js-string-lib](https://www.npmjs.com/package/@joshkaki00/js-string-lib)
+You can also find the package on npm: [@joshkaki00/js-string-lib](https://www.npmjs.com/package/string-utils-lib)
 
 ## Quick Start
 
