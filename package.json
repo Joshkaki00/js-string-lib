@@ -1,6 +1,6 @@
 {
   "name": "string-utils-lib",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "description": "A comprehensive string manipulation utility library",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
