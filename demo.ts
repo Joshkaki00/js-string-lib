@@ -16,10 +16,6 @@ import {
   isEmail, 
   isURL, 
   containsSubstring, 
-  hasEmoji, 
-  randomString, 
-  pluralize, 
-  maskString 
 } from './dist';
 
 console.log(capitalize('hello'));
