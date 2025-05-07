@@ -5,15 +5,17 @@ A comprehensive JavaScript utility library for string manipulation, providing a 
 ## Installation
 
 ```bash
-npm install string-utils-lib
+npm install @joshkaki00/js-string-lib
 ```
+
+You can also find the package on npm: [@joshkaki00/js-string-lib](https://www.npmjs.com/package/@joshkaki00/js-string-lib)
 
 ## Quick Start
 
 ### Basic Usage
 ```javascript
 // Import the functions you need
-import { capitalize, camelCase, snakeCase } from 'string-utils-lib';
+import { capitalize, camelCase, snakeCase } from '@joshkaki00/js-string-lib';
 
 // Use the functions
 const text = 'hello world';
@@ -26,7 +28,7 @@ console.log(snakeCase(text));     // Output: 'hello_world'
 1. Create a new file (e.g., `example.js`)
 2. Add your code:
 ```javascript
-const { capitalize, camelCase } = require('string-utils-lib');
+const { capitalize, camelCase } = require('@joshkaki00/js-string-lib');
 
 const result = capitalize('hello world');
 console.log(result); // Output: 'Hello world'
@@ -39,7 +41,7 @@ node example.js
 ### Running in Browser
 1. Include the library in your HTML:
 ```html
-<script src="node_modules/string-utils-lib/dist/index.js"></script>
+<script src="node_modules/@joshkaki00/js-string-lib/dist/index.js"></script>
 ```
 2. Use the functions:
 ```javascript
@@ -49,7 +51,7 @@ console.log(result); // Output: 'Hello world'
 
 ### Running in TypeScript
 ```typescript
-import { capitalize, camelCase } from 'string-utils-lib';
+import { capitalize, camelCase } from '@joshkaki00/js-string-lib';
 
 const text: string = 'hello world';
 const result: string = capitalize(text);
@@ -138,7 +140,7 @@ npm run lint:fix
 ## Usage
 
 ```javascript
-import { capitalize, camelCase, isEmail } from 'string-utils-lib';
+import { capitalize, camelCase, isEmail } from '@joshkaki00/js-string-lib';
 
 // Case manipulation
 capitalize('hello world'); // 'Hello world'
@@ -152,7 +154,7 @@ isEmail('test@example.com'); // true
 
 ### Case Manipulation
 ```javascript
-import { pascalCase, snakeCase, titleCase } from 'string-utils-lib';
+import { pascalCase, snakeCase, titleCase } from '@joshkaki00/js-string-lib';
 
 pascalCase('hello world'); // 'HelloWorld'
 snakeCase('helloWorld'); // 'hello_world'
@@ -161,7 +163,7 @@ titleCase('hello world'); // 'Hello World'
 
 ### Text Transformation
 ```javascript
-import { truncate, slugify, stripHTML } from 'string-utils-lib';
+import { truncate, slugify, stripHTML } from '@joshkaki00/js-string-lib';
 
 truncate('Hello world', 5, '...'); // 'Hello...'
 slugify('Hello World!'); // 'hello-world'
@@ -170,7 +172,7 @@ stripHTML('<p>Hello <b>world</b></p>'); // 'Hello world'
 
 ### String Generation
 ```javascript
-import { randomString, maskString } from 'string-utils-lib';
+import { randomString, maskString } from '@joshkaki00/js-string-lib';
 
 // Generate random string
 randomString(8, { uppercase: true, numbers: true }); // 'aB3cD4eF'
