@@ -1,4 +1,3 @@
-import type { RollupOptions } from 'rollup';
 import babel from '@rollup/plugin-babel';
 import resolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
@@ -6,7 +5,8 @@ import { terser } from 'rollup-plugin-terser';
 import typescript from '@rollup/plugin-typescript';
 import pkg from './package.json';
 
-const config: RollupOptions[] = [
+/** @type {import('rollup').RollupOptions[]} */
+const config = [
   // UMD build for browsers
   {
     input: 'src/index.ts',
@@ -67,4 +67,4 @@ const config: RollupOptions[] = [
   }
 ];
 
-export default config;
+export default config; 

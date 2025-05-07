@@ -128,7 +128,7 @@ export function titleCase(str: string): string {
  * truncate('Hello world', 5); // 'Hello'
  * truncate('Hello world', 5, '...'); // 'Hello...'
  */
-export function truncate(str: string, length: number, suffix: string = ''): string {
+export function truncate(str: string, length: number, suffix = ''): string {
   if (typeof str !== 'string') return '';
   if (typeof length !== 'number' || length < 0) return str;
   
@@ -287,7 +287,7 @@ export function isURL(str: string): boolean {
  * containsSubstring('Hello World', 'world', false); // true
  * containsSubstring('Hello World', 'world', true); // false
  */
-export function containsSubstring(str: string, substr: string, caseSensitive: boolean = true): boolean {
+export function containsSubstring(str: string, substr: string, caseSensitive = true): boolean {
   if (typeof str !== 'string' || typeof substr !== 'string') return false;
   
   if (caseSensitive) {
