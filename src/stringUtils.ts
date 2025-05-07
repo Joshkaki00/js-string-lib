@@ -97,7 +97,7 @@ export function titleCase(str: string): string {
   if (!str) return '';
   
   // List of small words to not capitalize (common in title case rules)
-  const smallWords = /^(a|an|and|as|at|but|by|for|if|in|nor|of|on|or|per|the|to|vs?\.?|via)$/i;
+  const smallWords = /^(a|an|and|as|at|but|by|for|if|in|nor|of|on|or|over|per|the|to|vs?\.?|via)$/i;
   
   return str.toLowerCase()
     .split(/\s+/)
