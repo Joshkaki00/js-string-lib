@@ -8,6 +8,54 @@ A comprehensive JavaScript utility library for string manipulation, providing a 
 npm install string-utils-lib
 ```
 
+## Quick Start
+
+### Basic Usage
+```javascript
+// Import the functions you need
+import { capitalize, camelCase, snakeCase } from 'string-utils-lib';
+
+// Use the functions
+const text = 'hello world';
+console.log(capitalize(text));    // Output: 'Hello world'
+console.log(camelCase(text));     // Output: 'helloWorld'
+console.log(snakeCase(text));     // Output: 'hello_world'
+```
+
+### Running in Node.js
+1. Create a new file (e.g., `example.js`)
+2. Add your code:
+```javascript
+const { capitalize, camelCase } = require('string-utils-lib');
+
+const result = capitalize('hello world');
+console.log(result); // Output: 'Hello world'
+```
+3. Run the file:
+```bash
+node example.js
+```
+
+### Running in Browser
+1. Include the library in your HTML:
+```html
+<script src="node_modules/string-utils-lib/dist/index.js"></script>
+```
+2. Use the functions:
+```javascript
+const result = stringUtils.capitalize('hello world');
+console.log(result); // Output: 'Hello world'
+```
+
+### Running in TypeScript
+```typescript
+import { capitalize, camelCase } from 'string-utils-lib';
+
+const text: string = 'hello world';
+const result: string = capitalize(text);
+console.log(result); // Output: 'Hello world'
+```
+
 ## Development
 
 ### Prerequisites
